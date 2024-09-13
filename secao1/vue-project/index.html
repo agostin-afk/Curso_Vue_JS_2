@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+  <input type="text" v-on:input="alterartitle" />
+  <p>{{title}}</p>
+</div>
+
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        title: "Usando Vue.js",
+      };
+    },
+    methods: {
+      alterartitle(event) {
+        this.title = event.target.value;
+      },
+    },
+  });
+  app.mount("#app");
+</script>
